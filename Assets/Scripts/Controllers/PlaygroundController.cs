@@ -27,7 +27,7 @@ public class PlaygroundController : MonoBehaviour
     {
         // We bind the level data.
         this._levelData = levelData.LevelData.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries)
-                .Select(x => x.Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries).Select(x => int.Parse(x)).ToArray())
+                .Select(x => x.Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries).Select(y => int.Parse(y)).ToArray())
                 .ToArray();
 
         // We change the constraint count.
